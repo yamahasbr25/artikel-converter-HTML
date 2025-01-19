@@ -71,6 +71,7 @@
         <textarea id="article" rows="10" placeholder="Masukkan artikel..."></textarea>
 
         <button onclick="formatHTML()">Format HTML</button>
+        <button onclick="clearFields()">Clear</button>
 
         <h2>Output:</h2>
         <div class="output" id="output"></div>
@@ -98,6 +99,12 @@
 
             // Display output
             document.getElementById('output').textContent = formattedHTML;
+        }
+
+        function clearFields() {
+            document.getElementById('title').value = '';
+            document.getElementById('article').value = '';
+            document.getElementById('output').textContent = '';
         }
     </script>
 </body>
