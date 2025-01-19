@@ -81,8 +81,8 @@
             const title = document.getElementById('title').value;
             const article = document.getElementById('article').value;
 
-            // Format title
-            const formattedTitle = `<h1>${title}</h1>`;
+            // Capitalize each sentence in the title
+            const formattedTitle = `<h1>${title.replace(/(^|\.\s+)([a-z])/g, (match, p1, p2) => p1 + p2.toUpperCase())}</h1>`;
 
             // Format article paragraphs
             const paragraphs = article.split('\n').filter(p => p.trim() !== '');
